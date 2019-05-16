@@ -13,12 +13,12 @@
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
           <Button fx:id="showSlidesList" mnemonicParsing="false" onAction="#rodytiSlidziuSarasa" text="Slides" />
-            <Button fx:id="showSalmasList" mnemonicParsing="false" text="Salmas" />
-            <Button fx:id="showBataiList" mnemonicParsing="false" text="Batai" />
-            <Button fx:id="showLazdosList" mnemonicParsing="false" text="Lazdos" />
-            <Button fx:id="showAkiniaiList" mnemonicParsing="false" text="Akiniai" />
+            <Button fx:id="showSalmasList" mnemonicParsing="false" onAction="#rodytiSalmuSarasa" text="Salmas" />
+            <Button fx:id="showBataiList" mnemonicParsing="false" onAction="#rodytiBatuSarasa" text="Batai" />
+            <Button fx:id="showLazdosList" mnemonicParsing="false" onAction="#rodytiLazduSarasa" text="Lazdos" />
+            <Button fx:id="showAkiniaiList" mnemonicParsing="false" onAction="#rodytiAkiniuSarasa" text="Akiniai" />
             <Button fx:id="rezervuoti" mnemonicParsing="false" onAction="#addItem" text="Rezervuoti" />
-            <Button fx:id="uzsakyti" mnemonicParsing="false" text="Uzsakyti" />
+            <Button fx:id="uzsakyti" mnemonicParsing="false" onAction="#uzdarytiLanga" text="Uzsakyti" />
         </buttons>
       </ButtonBar>
    </top>

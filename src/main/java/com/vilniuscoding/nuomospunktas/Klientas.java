@@ -1,38 +1,49 @@
 package com.vilniuscoding.nuomospunktas;
 
-import java.util.Scanner;
-
 public class Klientas {
-	public long klientoAsmensKodas;
-	public String klientoVardas;
-	public String klientoPavarde;
-	public int klientoTelefonoNumeris;
+	private long klientoAsmensKodas;
+	private String klientoVardas;
+	private String klientoPavarde;
+	private int klientoTelefonoNumeris;
 
 	public void klientoDuomenys() {
 		
 		System.out.println("Iveskite kliento varda");
-		Scanner Ivedimas = new Scanner(System.in);
-	    klientoVardas = Ivedimas.nextLine();
+	    klientoVardas = ScannerioKlase.getString();
 	    setKlientoVardas(klientoVardas);
 	    
 	    System.out.println("Iveskite kliento pavarde");
-	    klientoPavarde = Ivedimas.nextLine();
+	    klientoPavarde = ScannerioKlase.getString();
 	    setKlientoPavarde(klientoPavarde);
 	    
 	    System.out.println("Iveskite kliento telefono numeri");
-	    klientoTelefonoNumeris = Ivedimas.nextInt();
+	    klientoTelefonoNumeris = ScannerioKlase.getNumber();	    
+	    String telefonoNumerioIlgis;
+	    telefonoNumerioIlgis = Integer.toString(klientoTelefonoNumeris);	    
+	    while (telefonoNumerioIlgis.length() !=9) {
+	    	System.out.println("Ivedete netinkamo ilgio telefono numeri");
+	    	System.out.println("Iveskite kliento telefono numeri dar karta");
+		    klientoTelefonoNumeris = ScannerioKlase.getNumber();
+		    telefonoNumerioIlgis = Integer.toString(klientoTelefonoNumeris);
+		}	    
 	    setKlientoTelefonoNumeris(klientoTelefonoNumeris);
 	    
 	    System.out.println("Iveskite kliento asmens koda");
-	    klientoAsmensKodas = Ivedimas.nextLong();
+	    klientoAsmensKodas = ScannerioKlase.getLong();
+	    String asmensKodoIlgis;
+	    asmensKodoIlgis = Long.toString(klientoAsmensKodas);	    
+	    while (asmensKodoIlgis.length() !=11) {
+	    	System.out.println("Ivedete netinkamo ilgio asmens koda");
+	    	System.out.println("Iveskite kliento asmens koda dar karta");
+	    	klientoAsmensKodas = ScannerioKlase.getLong();
+		    asmensKodoIlgis = Long.toString(klientoAsmensKodas);
+		}	    
 	    setKlientoAsmensKodas(klientoAsmensKodas);
 	    
 	    System.out.println("Vardas -- " + klientoVardas);
 	    System.out.println("Pavarde -- " + klientoPavarde);
 	    System.out.println("Asmens Kodas -- " + klientoAsmensKodas);
 	    System.out.println("Telefono Numeris -- " + klientoTelefonoNumeris);
-	    
-	    Ivedimas.close();
 	  
 	}
 	
@@ -40,7 +51,7 @@ public class Klientas {
 		return klientoAsmensKodas;
 	}
 
-	public void setKlientoAsmensKodas(long klientoAsmensKodas) {
+	private void setKlientoAsmensKodas(long klientoAsmensKodas) {
 		this.klientoAsmensKodas = klientoAsmensKodas;
 	}
 
@@ -48,7 +59,7 @@ public class Klientas {
 		return klientoVardas;
 	}
 
-	public void setKlientoVardas(String klientoVardas) {
+	private void setKlientoVardas(String klientoVardas) {
 		this.klientoVardas = klientoVardas;
 	}
 
@@ -56,7 +67,7 @@ public class Klientas {
 		return klientoPavarde;
 	}
 
-	public void setKlientoPavarde(String klientoPavarde) {
+	private void setKlientoPavarde(String klientoPavarde) {
 		this.klientoPavarde = klientoPavarde;
 	}
 
@@ -64,7 +75,7 @@ public class Klientas {
 		return klientoTelefonoNumeris;
 	}
 
-	public void setKlientoTelefonoNumeris(int klientoTelefonoNumeris) {
+	private void setKlientoTelefonoNumeris(int klientoTelefonoNumeris) {
 		this.klientoTelefonoNumeris = klientoTelefonoNumeris;
 	}
 

@@ -7,19 +7,18 @@ public class Main {
 
 		System.out.println("Sveiki atvyke i nuomos punkta");
 		
-//		Klientas klientas = new Klientas();
-//		klientas.klientoDuomenys();
-		
-		InventoriausSpausdinimas.meniu();	// SITAS IJUNGTAS KAI KLIENTO DUOMENYS UZKOMENTUOTI DEL SCANNER
-		
+		Klientas klientas = new Klientas();
+		klientas.klientoDuomenys();
+//		
+//		InventoriausSpausdinimas.meniu();	
+//		
 //		KlientuDB.idetiKlientoDuomenisDB(klientas.getKlientoAsmensKodas(),klientas.getKlientoVardas(), 
 //				klientas.getKlientoPavarde(),klientas.getKlientoTelefonoNumeris());
 
+	//	Controller.main(args);
 		
-//		for(InventoriausObjektas inventoriausEilute: InventoriausSpausdinimas.slidziuSarasas()) {
-//		    System.out.println(inventoriausEilute);
-//		}
 
 	}
+
 
 }
