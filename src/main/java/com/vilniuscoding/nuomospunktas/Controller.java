@@ -1,5 +1,7 @@
 package com.vilniuscoding.nuomospunktas;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -168,7 +170,15 @@ public class Controller extends Application implements Initializable {
 	}
 	
 	@FXML
-	public void uzdarytiLanga(ActionEvent event) {
+	public void uzdarytiLanga(ActionEvent event) throws IOException {
+		
+		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Vytautas\\eclipse-workspace\\NuomosPunktas\\Isnuomota.txt", true));
+		for (Sarasas sarasas2 : sarasas) {
+			String rezervuotasInventorius = sarasas2.toString(sarasas2);
+			writer.append(rezervuotasInventorius);
+		    writer.append(System.getProperty("line.separator"));
+		}
+		writer.close();
 		Platform.exit();
 	}
 	

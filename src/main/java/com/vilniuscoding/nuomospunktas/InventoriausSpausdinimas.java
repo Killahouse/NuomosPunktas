@@ -16,6 +16,7 @@ public class InventoriausSpausdinimas {
 		System.out.println("5---Akiniai");
 		System.out.println();
 		System.out.println("Iveskite skaiciu koki sarasa noretumete atspausdinti:");
+		System.out.println("Norint baigti saraso perziura spauskite bet koki kita skaiciu");
 		int skaicius = ScannerioKlase.getNumber();
 
 		switch (skaicius) {
@@ -23,29 +24,34 @@ public class InventoriausSpausdinimas {
 			for (InventoriausObjektas inventoriausEilute : slidziuSarasas()) {
 				System.out.println(inventoriausEilute);
 			}
+			InventoriausSpausdinimas.meniu();
 			break;
 		case 2:
 			for (InventoriausObjektas inventoriausEilute : salmuSarasas()) {
 				System.out.println(inventoriausEilute);
 			}
+			InventoriausSpausdinimas.meniu();
 			break;
 		case 3:
 			for (InventoriausObjektas inventoriausEilute : batuSarasas()) {
 				System.out.println(inventoriausEilute);
 			}
+			InventoriausSpausdinimas.meniu();
 			break;
 		case 4:
 			for (InventoriausObjektas inventoriausEilute : lazduSarasas()) {
 				System.out.println(inventoriausEilute);
 			}
+			InventoriausSpausdinimas.meniu();
 			break;
 		case 5:
 			for (InventoriausObjektas inventoriausEilute : akiniuSarasas()) {
 				System.out.println(inventoriausEilute);
 			}
+			InventoriausSpausdinimas.meniu();
 			break;
 		default:
-			System.out.println("Ivedete netinkama skaiciu!!!");
+			System.out.println("Iseiname is saraso");
 			break;
 		}
 	}

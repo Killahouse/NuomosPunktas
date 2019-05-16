@@ -3,7 +3,7 @@ package model;
 public class Sarasas {
 
 	private Integer id;
-	private Integer kiekis;
+	private Integer kiekis;	
 	
 	public Sarasas(int id, int kiekis) {
 		this.id = new Integer(id);
@@ -24,5 +24,12 @@ public class Sarasas {
 
 	public void setKiekis(Integer kiekis) {
 		this.kiekis = kiekis;
+	}
+	
+	public String toString(Sarasas sarasas2) {
+		String zodis;
+		zodis = (id.toString() + " " + kiekis.toString());
+		return zodis;
+		
 	}
 }

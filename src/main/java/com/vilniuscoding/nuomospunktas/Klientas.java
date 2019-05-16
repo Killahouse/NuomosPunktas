@@ -8,6 +8,10 @@ public class Klientas {
 
 	public void klientoDuomenys() {
 		
+		
+	    String kazkas = ScannerioKlase.getString();
+	  
+		
 		System.out.println("Iveskite kliento varda");
 	    klientoVardas = ScannerioKlase.getString();
 	    setKlientoVardas(klientoVardas);
