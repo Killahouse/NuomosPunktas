@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vilniuscoding.nuomospunktas.Controller">
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button fx:id="showSlidesList" mnemonicParsing="false" onAction="#rodytiSlidziuSarasa" text="Slides" />
+            <Button fx:id="showSalmasList" mnemonicParsing="false" text="Salmas" />
+            <Button fx:id="showBataiList" mnemonicParsing="false" text="Batai" />
+            <Button fx:id="showLazdosList" mnemonicParsing="false" text="Lazdos" />
+            <Button fx:id="showAkiniaiList" mnemonicParsing="false" text="Akiniai" />
+            <Button fx:id="rezervuoti" mnemonicParsing="false" onAction="#addItem" text="Rezervuoti" />
+            <Button fx:id="uzsakyti" mnemonicParsing="false" text="Uzsakyti" />
+        </buttons>
+      </ButtonBar>
+   </top>
+   <bottom>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="kiekisColumn" prefWidth="75.0" text="Kiekis" />
+        </columns>
+      </TableView>
+   </bottom>
+   <center>
+      <TextField fx:id="idInputField" promptText="Iveskite ID" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <TextField fx:id="kiekisInputField" promptText="Iveskite kieki" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <TextArea fx:id="duomenuRodymas" prefHeight="178.0" prefWidth="356.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
